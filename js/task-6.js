@@ -9,10 +9,11 @@ const btnDestroy = buttons[1];
 
 btnCreate.addEventListener('click', (event) => {
       const amount = myInput.value;
-      const result = amount >= 1 && amount <= 100; 
-      createBoxes(amount);
-      myInput.value = '';
-  });
+      if (amount >= 1 && amount <= 100){
+        createBoxes(amount);
+        myInput.value = '';
+      } 
+    });
 
   btnDestroy.addEventListener('click', () => {
       destroyBoxes();
